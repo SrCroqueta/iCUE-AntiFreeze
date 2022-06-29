@@ -25,7 +25,7 @@ This a program made with Python to "fix" a bug with the iCUE monitoring.
      - **_HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\iCUE.exe_**
      - **_HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\Corsair.Service.exe_**
    
-- Now you have to delete or move **_iCUE AntiFreeze_** to another directory. You will find it by doing this:
+- Now you have to delete or move **_'iCUE AntiFreeze'_** to another directory. You will find it by doing this:
 
    - Press **_'Win + R'_** and type **_'%AppData%\Microsoft\Windows\Start Menu\Programs\Startup'_**.
     
