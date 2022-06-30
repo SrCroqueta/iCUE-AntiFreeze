@@ -39,13 +39,13 @@ def reloadService(): # Restarts 'CorsairService' every hour.
 
 def main():
     noWindow()
-    if isAdmin():
+    if not isAdmin():
+        ctypes.windll.user32.MessageBoxW(0, "You must run 'iCUE AntiFreeze.exe' as Administrator.", 'Error: Administrator privileges.', 0)
+    else:
         regKeyForHighPriority()
         copyToStartup()
         msgBox()
         reloadService()
-    else:
-        ctypes.windll.user32.MessageBoxW(0, "You must run 'iCUE AntiFreeze.exe' as Administrator.", 'Error: Administrator privileges.', 0)
 
 if __name__ == '__main__':
     main()
