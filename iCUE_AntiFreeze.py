@@ -23,7 +23,7 @@ def copyToStartup(): # Copies the '.exe' file to the Windows' Startup programs d
         pass
 
 def msgBox(): # Advices that the file it can be deleted from where it has been launched.
-    ctypes.windll.user32.MessageBoxW(0, "You can now delete the file where it has been launched from. It has been copied to the Windows' startup programs directory.\n\nYou can check it if you go to:\n\n%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\n\nThere should be the same file. Don't delete this one.", 'Info', 0)
+    ctypes.windll.user32.MessageBoxW(0, "You will be able to delete the file where it has been launched from after restart the system. It has been copied to the Windows' startup programs directory.\n\nYou can check it if you go to:\n\n%AppData%\Microsoft\Windows\Start Menu\Programs\Startup\n\nThere should be the same file. Don't delete this one.", 'Info', 0)
 
 def reloadService(): # Restarts 'CorsairService' every hour.
     while True:
