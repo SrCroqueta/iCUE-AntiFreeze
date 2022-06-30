@@ -3,6 +3,13 @@ import os, time, ctypes, shutil
 def noWindow(): # No black screen when running.
     ctypes.windll.user32.ShowWindow(ctypes.windll.kernel32.GetConsoleWindow(), 0)
 
+def isAdmin():
+    try:
+        is_admin = (os.getuid() == 0)
+    except AttributeError:
+        is_admin = ctypes.windll.shell32.IsUserAnAdmin() != 0
+    return is_admin
+
 def regKeyForHighPriority(): # Creates two directories with their registry keys to setting up high priority processes for Corsair's services.
 #    https://answers.microsoft.com/en-us/windows/forum/all/how-to-permanently-set-priority-processes-using/df82bd40-ce52-4b84-af34-4d93da17d079
     try:
@@ -32,10 +39,13 @@ def reloadService(): # Restarts 'CorsairService' every hour.
 
 def main():
     noWindow()
-    regKeyForHighPriority()
-    copyToStartup()
-    msgBox()
-    reloadService()
+    if isAdmin():
+        regKeyForHighPriority()
+        copyToStartup()
+        msgBox()
+        reloadService()
+    else:
+        ctypes.windll.user32.MessageBoxW(0, "You must run 'iCUE AntiFreeze.exe' as Administrator.", 'Error: Administrator privileges.', 0)
 
 if __name__ == '__main__':
     main()
