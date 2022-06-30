@@ -9,7 +9,7 @@ This a program made with Python to "fix" a bug with the iCUE monitoring.
 
 ## How to use:
 
-- Just download **_'iCUE AntiFreeze.exe'_** and launch it as administrator, that's all.
+- Just download **_'iCUE AntiFreeze.exe'_** and **_launch it as administrator_**, that's all.
 > You will be able to **_delete_** the file where it has been launched from **_after reboot the system_**. It has been copied to the **_Windows startup programs_** directory.
 > 
 >You can check it if you go to:
