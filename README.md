@@ -9,7 +9,7 @@ This a program made with Python to "fix" a bug with the iCUE monitoring.
 
 ## How to use:
 
-- Just download **_'iCUE AntiFreeze.exe'_** and launch it, that's all.
+- Just download **_'iCUE AntiFreeze.exe'_** and launch it as administrator, that's all.
 
 ## AntiVirus detected it as a threat:
 
